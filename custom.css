@@ -11,8 +11,8 @@
 }
 
 body {
-  color: black;
   background-color: white;
+  color: black;
   font-family: monospace;
 }
 
@@ -27,14 +27,14 @@ body {
 }
 
 .header > p:first-child {
-  color: black;
   background-color: white;
+  color: black;
 }
 
 .container {
   background-color: #eeeeee;
-  padding: 10px 15px 10px 15px;
   color: black;
+  padding: 10px 15px 10px 15px;
 }
 
 .container p:first-child {
@@ -75,17 +75,32 @@ a {
   font-weight: bold;
 }
 
-footer {
+footer, #quote {
   margin: 15px;
 }
 
-.buttons-test-btn1000-v1 {
+.test-btn-old > a {
+  margin-top: 5px;
+  display: inline-block;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  user-select: none;
+  padding: .6em 2em;
+  outline: none;
+  border: 2px solid;
+  cursor: pointer;
+  border-radius: 1px;
+  transition: 0.25s;
+}
+
+.test-btn1000-v1 {
   display: flex;
   flex-wrap: wrap;
   margin-left: -5px;
 }
 
-.buttons-test-btn1000-v1 > a {
+.test-btn1000-v1 > a {
   background-color: #111318;
   color: white;
   cursor: grab;
@@ -101,6 +116,6 @@ footer {
   margin: 5px 0 0 5px;
 }
 
-.buttons-test-btn1000-v2 > a {
+.test-btn1000-v2 > a {
   flex: 1 0 calc(25% - 32px);
 }
