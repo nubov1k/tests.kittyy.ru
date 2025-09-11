@@ -71,12 +71,26 @@ a {
   color: red;
 }
 
-#alert-symbol {
+#alert-symbol, summary {
   font-weight: bold;
 }
 
-footer, #quote {
+footer, #quote, details {
   margin: 15px;
+}
+
+.test-containers-test-blocks {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.test-containers-mini-block {
+  display: inline-block;
+  background-color: #eeeeee;
+  color: black;
+  padding: 10px 15px 10px 15px;
+  width: 200px;
 }
 
 .test-btn-old > a {
