@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <title>lyrics</title>
+  <meta name="language" content="Russian">
+  <meta name="description" content="tests.kittyy.ru">
+  <meta name="author" lang="en" content="qwkrtezzz (https://github.com/nubovik01)">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="tests.kittyy.ru">
+  <meta property="og:site_name" content="/dev/null">
+  <meta property="twitter:title" content="/dev/null">
+  <meta property="og:url" content="https://tests.kittyy.ru/">
+  <meta property="twitter:url" content="https://tests.kittyy.ru/">
+  <meta property="og:image" content="https://nubovik01.gitbook.io/files/images/omyum.ico">
+  <meta property="twitter:image" content="https://nubovik01.gitbook.io/files/images/omyum.ico">
+  <script src="https://nbvk.kittyy.ru/files/js/preloader.js"></script>
+  <link href="https://nbvk.kittyy.ru/files/css/preloader.css" rel="stylesheet">
+  <link href="../files/css/custom.css" rel="stylesheet">
+  <link href="../files/css/tests.css" rel="stylesheet">
+  <script src="https://nbvk.kittyy.ru/files/js/title.js"></script>
+  <script src="https://nbvk.kittyy.ru/files/js/quotes.js"></script>
+  <script src="https://nbvk.kittyy.ru/files/js/footer.js"></script>
+  <script src="https://nbvk.kittyy.ru/files/js/age.js"></script>
+  <script src="https://nbvk.kittyy.ru/files/js/kaomojies.js"></script>
+  <link rel="icon" type="image/x-icon" href="https://nbvk.kittyy.ru/files/images/omyum.ico">
+</head>
+
+<body>
+  <div class="header">
+    <a href="/">tests.kittyy.ru</a> <p>/lyrics</p>
+  </div>
+
+  <div class="container info" style="margin-top: 15px;">
+    <p>🎵 лиззз — хитрый лис</p>
+    <p id="trackPlayTime"></p>
+    <audio src="../files/music/lizzz.mp3"></audio>
+    <div class="buttons test-btn-old">
+      <a id="playButton" onclick="startPlayTrack()">вкл</a>
+    </div>
+  </div>
+
+  <div class="container" hidden>
+    <p id="lyrics"></p>
+  </div>
+
+  <p id="quote" onclick="changeQuote();">
+    ”Я кажусь себе слишком навязчивым. 2157.”
+  </p>
+
+  <footer></footer>
+
+  <footer>
+    <p>Авторские права на трек принадлежат лиззз.</p>
+    <p>Трек не используется в коммерческих целях.</p>
+  </footer>
+</body>
+
+<script>
+  const audio = document.getElementsByTagName("audio")[0];
+  const lyricsContainer = document.getElementsByClassName("container")[1];
+  const lyrics = document.getElementById("lyrics");
+  const playButton = document.getElementById("playButton");
+  const trackPlayTime = document.getElementById("trackPlayTime");
+
+  const lines = [
+    { time: 0, text: "🎶🎹🎸🎶🎹🎸🎶🎹🎸🎶" },
+    { time: 1, text: "🎹🎸🎶🎹🎸🎶🎹🎸🎶🎹" },
+    { time: 2, text: "🎸🎶🎹🎸🎶🎹🎸🎶🎹🎸" },
+    { time: 3, text: "🎶🎹🎸🎶🎹🎸🎶🎹🎸🎶" },
+    { time: 4, text: "🎹🎸🎶🎹🎸🎶🎹🎸🎶🎹" },
+    { time: 5, text: "🎸🎶🎹🎸🎶🎹🎸🎶🎹🎸" },
+    { time: 6, text: "🎶🎹🎸🎶🎹🎸🎶🎹🎸🎶" },
+    { time: 7, text: "🎹🎸🎶🎹🎸🎶🎹🎸🎶🎹" },
+    { time: 8, text: "🎸🎶🎹🎸🎶🎹🎸🎶🎹🎸" },
+    { time: 9, text: "🎶🎹🎸🎶🎹🎸🎶🎹🎸🎶" },
+    { time: 10, text: "🎹🎸🎶🎹🎸🎶🎹🎸🎶🎹" },
+    { time: 11, text: "🎸🎶🎹🎸🎶🎹🎸🎶🎹🎸" },
+    { time: 12, text: "🎶🎹🎸🎶🎹🎸🎶🎹🎸🎶" },
+    { time: 13, text: "🎹🎸🎶🎹🎸🎶🎹🎸🎶🎹" },
+    { time: 14, text: "🎸🎶🎹🎸🎶🎹🎸🎶🎹🎸" },
+    { time: 15, text: "3..." },
+    { time: 16, text: "2..." },
+    { time: 17, text: "1..." },
+    { time: 18, text: "знаю путь, спасущий меня" },
+    { time: 20, text: "от едко-пахнущего хмеля" },
+    { time: 22, text: "но не дойду, я слеп на тебя" },
+    { time: 24, text: "я не дойду, послушай меня" },
+    { time: 26, text: "я хитрый лис, скачу по словам" },
+    { time: 29, text: "попутно выясняю обман" },
+    { time: 31, text: "в его устах услышу лишь мрак" },
+    { time: 33, text: "в твоем устала вижу обман" },
+    { time: 36, text: "пара-па-па-па-па попытайся" },
+    { time: 38, text: "чуть поменьше всех добивайся" },
+    { time: 41, text: "жизнь сложна и похуй, не парься" },
+    { time: 43, text: "жизнь сложна, но ты улыбайся" },
+    { time: 45, text: "удали ее переписку" },
+    { time: 47, text: "заплати ты брату за виски" },
+    { time: 50, text: "и на вписках слушайте лизззку" },
+    { time: 52, text: "слушайте лизззку, В СМЫСЛЕ МЕНЯ!" },
+    { time: 55, text: ";)" }
+  ];
+
+  let isPlaying = false;
+
+  function startPlayTrack() {
+    audio[isPlaying ? "pause" : "play"]();
+    isPlaying = !isPlaying;
+    playButton.textContent = isPlaying ? "пауза" : "продолжить";
+    lyricsContainer.hidden = !isPlaying;
+  };
+
+  function trackTime(current, duration) {
+    return {
+      current: `${Math.floor(current / 60)}:${Math.floor(current % 60).toString().padStart(2, "0")}`,
+      duration: `${Math.floor(duration / 60)}:${Math.floor(duration % 60).toString().padStart(2, "0")}`
+    };
+  };
+
+  audio.addEventListener("timeupdate", () => {
+    const currentTrackTime = +audio.currentTime.toFixed();
+    const durationTrackTime = audio.duration;
+
+    const currentLine = lines.filter(line => currentTrackTime >= line.time).pop();
+
+    if (currentTrackTime === currentLine.time) {
+      lyrics.textContent = currentLine.text;
+    };
+
+    const _trackTime = trackTime(currentTrackTime, durationTrackTime);
+
+    trackPlayTime.textContent = `${_trackTime.current} / ${_trackTime.duration}`;
+  });
+</script>
+
+</html>

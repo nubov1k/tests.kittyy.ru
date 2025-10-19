@@ -4,11 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>tests.kittyy.ru</title>
-  <meta name="language" content="English">
+  <meta name="language" content="Russian">
   <meta name="description" content="tests.kittyy.ru">
-  <meta name="theme-color" content="#242424">
   <meta name="author" lang="en" content="qwkrtezzz (https://github.com/nubovik01)">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:type" content="website">
@@ -21,30 +19,37 @@
   <meta property="twitter:image" content="https://nubovik01.gitbook.io/files/images/omyum.ico">
   <script src="https://nbvk.kittyy.ru/files/js/preloader.js"></script>
   <link href="https://nbvk.kittyy.ru/files/css/preloader.css" rel="stylesheet">
-  <link rel="preconnect" href="https://r.kittyy.ru" />
-  <script src="https://nbvk.kittyy.ru/files/js/redirecter.js"></script>
-  <link href="./custom.css" rel="stylesheet">
+  <link href="./files/css/custom.css" rel="stylesheet">
+  <link href="./files/css/tests.css" rel="stylesheet">
   <script src="https://nbvk.kittyy.ru/files/js/title.js"></script>
   <script src="https://nbvk.kittyy.ru/files/js/quotes.js"></script>
   <script src="https://nbvk.kittyy.ru/files/js/footer.js"></script>
   <script src="https://nbvk.kittyy.ru/files/js/age.js"></script>
   <script src="https://nbvk.kittyy.ru/files/js/kaomojies.js"></script>
-  <script src="https://nbvk.kittyy.ru/files/js/additionalButtons.js"></script>
   <link rel="icon" type="image/x-icon" href="https://nbvk.kittyy.ru/files/images/omyum.ico">
 </head>
 
 <body>
   <div class="header">
-    <p>tests.kittyy.ru</p>
-    <p>/dev/null</p>
+    <a href="/">tests.kittyy.ru</a> <p>/lyrics</p>
   </div>
 
-  <div class="container" id="info" style="margin-top: 15px;">
+  <div class="container info" style="margin-top: 15px;">
     <p>
       <span id="alert-bracket">[</span><span id="alert-symbol">!</span><span id="alert-bracket">]</span>
       <b>входящий звонок</b>: пасасеш? <span id="kaomoji" onclick="changeKaomoji()">@_@</span> <a href="https://ya.ru/search/?text=пизда">да</a> / <a href="https://ya.ru/search/?text=пидора+ответ">нет</a>
     </p>
   </div>
+
+  <details>
+    <summary>кто такой никита?</summary>
+    <img src="./files/photos/nikita.jpg">
+  </details>
+
+  <details>
+    <summary>i luv kfc!!!&lt;3</summary>
+    <video src="./files/videos/kfc.mp4" autoplay loop></video>
+  </details>
 
   <details>
     <summary>Тест #containers-mini</summary>
@@ -53,30 +58,30 @@
 
     <div class="test-containers-test-blocks">
       <div class="test-containers-mini-block">
-        <h3>Мини-контейнер</h3>
-        <p>Какой-то текст</p>
-        <div id="buttons" class="test-btn1000-v1">
+        <h3>Мини-контейнер #1</h3>
+        <p>Обычный текст</p>
+        <div class="buttons test-btn-old">
           <a>кнопка</a>
         </div>
         <p style="margin-top: 5px;">Еще какой-то текст</p>
       </div>
   
       <div class="test-containers-mini-block">
-        <h3>Мини-контейнер</h3>
-        <p>Какой-то текст</p>
-        <div id="buttons" class="test-btn1000-v1">
+        <h3>Мини-контейнер #2</h3>
+        <p>Странный текст</p>
+        <div class="buttons test-btn1000-v1">
           <a>кнопка</a>
         </div>
-        <p style="margin-top: 5px;">Еще какой-то текст</p>
+        <p style="margin-top: 5px;">Еще чертов текст</p>
       </div>
   
       <div class="test-containers-mini-block">
-        <h3>Мини-контейнер</h3>
-        <p>Какой-то текст</p>
-        <div id="buttons" class="test-btn1000-v1">
+        <h3>Мини-контейнер #3</h3>
+        <p>Непонятный текст</p>
+        <div class="buttons test-btn1000-v1">
           <a>кнопка</a>
         </div>
-        <p style="margin-top: 5px;">Еще какой-то текст</p>
+        <p style="margin-top: 5px;">Еще странный текст</p>
       </div>
     </div>
   </details>
@@ -85,7 +90,7 @@
     <div id="category">
       <p id="btn-old">Тест #btn-old. Самые первые кнопки на <a href="https://nbvk.kittyy.ru">nbvk.kittyy.ru</a>.</p>
       <p>Код взят напрямую с старой версии сайта почти без изменений.</p>
-      <div id="buttons" class="test-btn-old">
+      <div class="buttons test-btn-old">
         <a>telegram</a>
         <a>youtube</a>
         <a>instagram</a>
@@ -105,12 +110,12 @@
       <p id="btn1000">Тест #btn1000-v1. Черные кнопки с автоматической адаптацией под размер окна.</p>
       <p>Если в кнопке одно слово - все будет хорошо, но в ином случае - плохо.</p>
       <p>Неограниченное количество колонок, в отличии, например, от <a href="https://nbvk.kittyy.ru">nbvk.kittyy.ru</a>.</p>
-      <div id="buttons" class="test-btn1000-v1">
+      <div class="buttons test-btn1000-v1">
         <a>биполярка</a>
         <a>транквилизаторы</a>
         <a>скромность</a>
         <a>киви</a>
-        <a>7866gang</a>
+        <a>2157</a>
         <a>сша</a>
         <a>вечность</a>
         <a>огурец</a>
@@ -124,8 +129,8 @@
     <div id="category">
       <p id="btn1000">Тест #btn1000-v2. Черные кнопки с автоматической адаптацией под размер окна.</p>
       <p>То же самое, но включено ограниченное количество колонок.</p>
-      <div id="buttons" class="test-btn1000-v1 test-btn1000-v2">
-        <a>банан</a>
+      <div class="buttons test-btn1000-v1 test-btn1000-v2">
+        <a>холод</a>
         <a>пустота</a>
         <a>2017</a>
         <a>звездочки</a>
@@ -146,7 +151,7 @@
   </div>
 
   <p id="quote" onclick="changeQuote();">
-    ://: 2:11. RUN AWAY.
+    ”Я кажусь себе слишком навязчивым. 2157.”
   </p>
 
   <footer></footer>
